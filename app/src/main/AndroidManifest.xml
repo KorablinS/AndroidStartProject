@@ -22,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+       <activity
             android:name=".MainActivity"
             android:exported="true">
-        </activity>
+    </activity>
     </application>
 
 </manifest>

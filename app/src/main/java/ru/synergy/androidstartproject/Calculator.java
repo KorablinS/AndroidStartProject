@@ -2,6 +2,7 @@ package ru.synergy.androidstartproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Shader;
 import android.os.Bundle;
@@ -39,13 +40,15 @@ public class Calculator extends AppCompatActivity {
 //        SharedPreferences prefs = getApplicationContext().getSharedPreferences("PREFS", MODE_PRIVATE);
 //
 
-
+            //// intent - посылка
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(LogcatTag, "Button have been pushed");
                 CalculateAnswer();
+                Intent i = new Intent(Calculator.this, MainActivity.class);  //  написать письмо
+                startActivity(i);  //  отпраить письмо
             }
         });
     }
@@ -88,6 +91,11 @@ public class Calculator extends AppCompatActivity {
         RadioButton sub = (RadioButton) findViewById(R.id.subtract);
         RadioButton multiply = (RadioButton) findViewById(R.id.multiply);
         RadioButton divide = (RadioButton) findViewById(R.id.divide);
+
+        numOne.setText("0");
+        numTwo.setText("0");
+        add.setChecked(true);
+
 
         TextView answer = (TextView) findViewById(R.id.result);
         Log.d(LogcatTag, "All views have been founded");
