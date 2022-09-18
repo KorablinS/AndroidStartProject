@@ -63,7 +63,7 @@ public class Calculator extends AppCompatActivity {
 
             e.printStackTrace();
             dropFields();
-            Toast.makeText(Calculator.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(Calculator.this, e.getMessage() + " of class " + e.getClass(), Toast.LENGTH_LONG).show();
 
                 }
 
@@ -190,7 +190,7 @@ public class Calculator extends AppCompatActivity {
         Log.d(LogcatTag, "The result of operations is: " + solution);
         answer.setText("The answer is"+ solution);
 
-        switch ((int) Math.random()*2){
+        switch ((int) (Math.random()*3)){
             case 0 :throw new ArithmeticException("I am generated arithmetical exception");
             case 1 :throw new IOException("I am generated io exception");
 
