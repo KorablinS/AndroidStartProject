@@ -100,12 +100,12 @@ public class Calculator extends AppCompatActivity {
         TextView answer = (TextView) findViewById(R.id.result);
         Log.d(LogcatTag, "All views have been founded");
 
-        try {
-            int a =25/0;
-
-        } catch (ArithmeticException e){
-            e.printStackTrace();
-        }
+//        try {
+//            int a =25/0;
+//
+//        } catch (ArithmeticException e){
+//            e.printStackTrace();
+//        }
 
 
         float numone = 0;
